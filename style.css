@@ -13,12 +13,12 @@
   --cream:  #F5EEE6;   /* main text */
   --muted:  #A498B4;   /* secondary text */
 
-  --amber:  #FFB25C;   /* PRIMARY accent â€” buttons, highlights, the glow */
+  --amber:  #FFB25C;   /* PRIMARY accent buttons, highlights, the glow */
   --coral:  #FF6B5B;   /* warnings, "over goal" */
   --mint:   #7EE0C0;   /* success, "under goal" */
   --violet: #9B7BD4;   /* third data colour */
 
-  --on-accent: #16121D;  /* text colour */
+  --on-accent: #16121D;  /* the main text colour */
 
   /* ---- Type */
   --display: "Bricolage Grotesque", "Trebuchet MS", sans-serif;  /* headings */
@@ -62,7 +62,7 @@
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
-  overflow-x: hidden;          /* the decorative .glow sits past the page edge */
+  overflow-x: hidden;          
 }
 
 body {
@@ -111,7 +111,7 @@ img, svg { max-width: 100%; }
   clip: rect(0 0 0 0); white-space: nowrap; border: 0;
 }
 
-/* "Skip to content" â€” hidden until a keyboard user tabs to it. */
+/* "Skip to content that is hidden until a keyboard user tabs to it. */
 .skip-link {
   position: absolute; left: var(--s3); top: -100px;
   background: var(--amber); color: var(--on-accent);
@@ -121,7 +121,7 @@ img, svg { max-width: 100%; }
 .skip-link:focus { top: 0; }
 
 
-/* ==TEXTURE=========== */
+/* ==TEXTURE */
 
 
 body::after {
@@ -133,7 +133,7 @@ body::after {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
-/* ===LAYOUT HELPERS=================== */
+/* ===LAYOUT HELPERS */
 
 
 .wrap { width: min(100% - 2.5rem, var(--maxw)); margin-inline: auto; }
@@ -165,7 +165,7 @@ section { position: relative; padding-block: var(--s7); overflow-x: clip; }
 .grid-2 { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
 
 
-/* ==HEADER & NAV=============== */
+/* ==HEADER & NAV */
 
 .site-header {
   position: sticky; top: 0; z-index: 90;
@@ -211,7 +211,7 @@ section { position: relative; padding-block: var(--s7); overflow-x: clip; }
 .theme-toggle:hover { transform: rotate(-18deg); border-color: var(--amber); }
 
 
-/* ===BUTTONS======================= */
+/* ===BUTTONS */
 
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 0.55rem;
@@ -242,7 +242,7 @@ section { position: relative; padding-block: var(--s7); overflow-x: clip; }
 .btn-row { display: flex; flex-wrap: wrap; gap: var(--s2); }
 
 
-/* ===CARDS & THE PRIVACY BAND================== */
+/* ===CARDS & THE PRIVACY BAND */
 
 .card {
   background: var(--night);
@@ -271,7 +271,7 @@ section { position: relative; padding-block: var(--s7); overflow-x: clip; }
 }
 
 
-/* ==========HERO - PICKUP COUNTER================= */
+/* ==========HERO - PICKUP COUNTER */
 
 .hero { padding-block: var(--s8) var(--s7); overflow: hidden; }
 
@@ -307,7 +307,7 @@ section { position: relative; padding-block: var(--s7); overflow-x: clip; }
 }
 
 
-/* ===STATS AND THE THREE NUMBERED STEPS====================== */
+/* ===STATS AND THE THREE NUMBERED STEPS */
 
 .stat { text-align: left; }
 .stat-num {
@@ -335,7 +335,7 @@ section { position: relative; padding-block: var(--s7); overflow-x: clip; }
 .steps .step:nth-child(3) { margin-top: calc(var(--s4) * 2); }
 
 
-/* ====FOOTER========================= */
+/* ====FOOTER */
 
 .site-footer {
   border-top: 1px solid var(--edge);
@@ -351,7 +351,7 @@ section { position: relative; padding-block: var(--s7); overflow-x: clip; }
 }
 
 
-/* ====MOTION & SCROLL REVEALS=========================== */
+/* ====MOTION & SCROLL REVEALS */
 
 
 
@@ -379,16 +379,16 @@ section { position: relative; padding-block: var(--s7); overflow-x: clip; }
 }
 
 
-/* ====RESPONSIVE====================== */
+/* ====RESPONSIVE for mobile etc devices */
 
-
+/*iPad size devices */
 @media (max-width: 900px) {
   .hero-inner { grid-template-columns: 1fr; gap: var(--s5); }
   .counter-block { order: -1; }             
   .steps .step { margin-top: 0 !important; } 
 }
 
-/* ---- Phone ---------*/
+/* ---- Phones */
 @media (max-width: 640px) {
   :root { --s7: 3.2rem; --s8: 4rem; }        
 
